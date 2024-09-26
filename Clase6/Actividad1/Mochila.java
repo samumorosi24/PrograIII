@@ -14,14 +14,14 @@ public class Mochila {
 
             for (int j = 0; j <= P; j++) {
                 if (peso > j) {
-                    dp[i][j] = dp[i - 1][j]; // No se puede incluir el objeto
+                    dp[i][j] = dp[i - 1][j]; 
                 } else {
-                    dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - peso] + valor); // Se evalúa incluir o no
+                    dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - peso] + valor); // Se evalua incluir o no
                 }
             }
         }
 
-        // El valor máximo estará en dp[n][P]
+        // El valor mmaximo va a estar en dp[n][P]
         System.out.println("El valor máximo que se puede obtener es: " + dp[n][P]);
     }
 }
