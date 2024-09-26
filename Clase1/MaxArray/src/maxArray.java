@@ -1,4 +1,4 @@
-public class maxArray {
+public class MaxArray {
     public static int calcularMaximo(int[] arr) {
         int maximo = arr[0]; 
         for (int i = 1; i < arr.length; i++) { 

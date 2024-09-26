@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class facturacionSinMap {
+public class FacturacionSinMap {
 
     public static void main(String[] args) {
         List<Cliente> clientes = List.of(
