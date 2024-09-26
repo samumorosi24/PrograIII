@@ -16,7 +16,7 @@ class Grafo {
 
     public void agregarArista(int origen, int destino, int peso) {
         adyacencia.get(origen).add(new Arista(destino, peso));
-        adyacencia.get(destino).add(new Arista(origen, peso)); // Para grafos no dirigidos
+        adyacencia.get(destino).add(new Arista(origen, peso)); 
     }
 
     public void dijkstra(int inicio) {
@@ -57,7 +57,7 @@ class Grafo {
     }
 
     public static void main(String[] args) {
-        Grafo grafo = new Grafo(5); // Crear un grafo con 5 centros de distribución
+        Grafo grafo = new Grafo(5); 
         grafo.agregarArista(0, 1, 10);
         grafo.agregarArista(0, 2, 5);
         grafo.agregarArista(1, 2, 2);
@@ -68,6 +68,6 @@ class Grafo {
         grafo.agregarArista(3, 4, 4);
         grafo.agregarArista(4, 3, 6);
 
-        grafo.dijkstra(0); // Iniciar desde el centro de distribución principal (0)
+        grafo.dijkstra(0); 
     }
 }
