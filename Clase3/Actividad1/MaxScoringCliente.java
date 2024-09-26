@@ -1,4 +1,4 @@
-package Clase3;
+package Clase3.Actividad1;
 
 class Cliente {
     int id;
@@ -19,7 +19,6 @@ class Cliente {
 public class MaxScoringCliente {
 
     public static Cliente encontrarMaximo(Cliente[] clientes, int inicio, int fin) {
-        // Caso base: si hay un solo cliente
         if (inicio == fin) {
             return clientes[inicio];
         }
@@ -27,11 +26,11 @@ public class MaxScoringCliente {
         // Dividir el array en dos partes
         int medio = (inicio + fin) / 2;
         
-        // Llamada recursiva para ambas mitades
+        // Llamada recursiva para las dos mitades
         Cliente maxIzquierda = encontrarMaximo(clientes, inicio, medio);
         Cliente maxDerecha = encontrarMaximo(clientes, medio + 1, fin);
         
-        // Combinar las soluciones
+        // Combinar 
         return (maxIzquierda.scoring > maxDerecha.scoring) ? maxIzquierda : maxDerecha;
     }
 
