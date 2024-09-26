@@ -54,10 +54,8 @@ public class DosClientesConMayorScoring {
             new Cliente(5, "Luis", 92)
         };
 
-        // Llamada a la función recursiva
         Cliente[] dosClientesMayores = encontrarDosClientesMayores(clientes, 0, clientes.length - 1);
 
-        // Imprimir los dos clientes con mayor scoring
         System.out.println("Los dos clientes con mayor scoring son: " + Arrays.toString(dosClientesMayores));
     }
 }
