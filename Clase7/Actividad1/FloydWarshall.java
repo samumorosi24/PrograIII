@@ -1,7 +1,7 @@
 package Clase7.Actividad1;
 
 public class FloydWarshall {
-    final static int INF = Integer.MAX_VALUE;  // Usamos el valor máximo de entero para representar el infinito
+    final static int INF = Integer.MAX_VALUE;  
     
     public static void main(String[] args) {
         FloydWarshall fw = new FloydWarshall();
@@ -24,7 +24,7 @@ public class FloydWarshall {
             }
         }
 
-        // Actualizar la matriz de distancias usando el algoritmo de Floyd-Warshall
+        // Uso del algoritmo de Floyd-Warshall
         for (int k = 0; k < V; k++) {
             for (int i = 0; i < V; i++) {
                 for (int j = 0; j < V; j++) {
@@ -34,8 +34,6 @@ public class FloydWarshall {
                 }
             }
         }
-
-        // Imprimir la matriz de distancias
         printSolution(dist, V);
     }
 
@@ -46,7 +44,7 @@ public class FloydWarshall {
                 if (dist[i][j] == INF)
                     System.out.print("INF  ");
                 else
-                    System.out.print(dist[i][j] + "    "); // Espacio adicional para mejor alineación
+                    System.out.print(dist[i][j] + "    "); 
             }
             System.out.println();
         }
