@@ -4,7 +4,7 @@ import java.util.*;
 
 public class FloresCompra {
 
-    public static int getMinimumCost(int[] c, int k) {
+    public static int costoMinimo(int[] c, int k) {
         Arrays.sort(c);
         int totalCost = 0;
         int numPurchases = 0;
@@ -30,7 +30,7 @@ public class FloresCompra {
             c[i] = Integer.parseInt(prices[i]);
         }
 
-        int result = getMinimumCost(c, k);
+        int result = costoMinimo(c, k);
         System.out.println(result);
         
         scanner.close();
