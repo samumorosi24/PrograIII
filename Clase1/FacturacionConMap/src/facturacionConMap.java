@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FacturacionConMap {
+public class facturacionConMap {
 
     public static void main(String[] args) {
         List<Cliente> clientes = new ArrayList<>();
