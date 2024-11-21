@@ -1,0 +1,18 @@
+1)¿Cómo funciona el backtracking en este problema?
+El algoritmo intenta colocar una reina en una fila del tablero, despues prueba diferentes columnas para ver si puede colocar la reina sin atacar a otras, si encuentra una columna valida recursivamente intenta colocar las siguientes reinas en las filas siguientes. Si en algun momento no puede colocar una reina retrocede y mueve la reina colocada anteriormente a una nueva posición.
+
+2)¿Qué pasa cuando el algoritmo encuentra una solución?
+ Cuando el algoritmo coloca todas las reinas en el tablero de forma segura (cuando row == N), significa que ha encontrado una solución válida. En ese punto, retorna true y termina el proceso. El tablero con la disposición de las reinas se imprime
+
+3)¿Qué ocurre cuando no puede colocar más reinas?
+Si el algoritmo no puede colocar una reina en una fila, el algoritmo realiza un retroceso: descoloca la ultima reina colocada (la posicion se marca como 0) y prueba con la siguiente columna posible en la fila anterior
+
+4)¿Qué sucede en el código cuando el algoritmo "retrocede"? ¿Cómo se visualiza en Python Tutor?
+En el codigo, el retroceso ocurre cuando el algoritmo no puede colocar una reina en una fila despues de haber intentado todas las columnas posibles. En este caso, descoloca la reina y vuelve a intentar desde la fila anterior, buscando una nueva posición para la reina anterior. En python tutor, se puede ver cómo el programa vuelve a una llamada anterior y cambia el valor de la reina colocada a 0 en la posición donde fallo, despues sigue probando otras configuraciones
+
+5)¿Qué modificaciones harías para aumentar N a 8? ¿Cómo crees que cambiaría el tiempo de ejecución?
+Para aumentar el valor de N a 8, se necesita cambiar la constante N = 4 a N = 8. Aunque el tiempo de ejecucion aumenta porque el problema crece en complejidad con respecto a N para N = 8, el algoritmo tiene que probar muchas mas combinaciones, lo que hace que el tiempo de ejecucion sea mas largo. Aunque sigue siendo un algoritmo eficienteya que el backtracking descarta muchas configuraciones invalidas
+
+6)¿Por qué el método isSafe es crucial en este algoritmo?
+El método isSafe es crucial porque permite verificar si es seguro colocar una reina en una posicion determinada (en una fila y columna especificas). Verifica si la columna ya tiene una reina y si las diagonales superiores derecha e izquiera estan ocupadas. Si alguna de estas condiciones es verdadera, no es seguro colocar la reina en esa posicion. Sin esta comprobacion, el algoritmo no puede asegurarse de que las reinas no se esten atacando entre si
+

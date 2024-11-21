@@ -1,0 +1,4 @@
+El Problema del Viajante (TSP) trata de encontrar el camino más corto para un vendedor que debe visitar varias ciudades y luego regresar a la ciudad de inicio, pasando por cada ciudad solo una vez
+Para las 15 ciudades en total el numero de rutas posibles es 
+
+(15-1)!/2 = 43,589,145,600

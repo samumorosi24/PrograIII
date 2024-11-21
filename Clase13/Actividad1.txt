@@ -1,0 +1,26 @@
+1) Indicar algunos ejemplos de Acciones posibles del atacante: 
+
+Cross-Site Scripting, Inyeccion SQL, Phishing
+
+2) Indicar las Funciones del sistema de detección A su vez, el sistema de detección de ataques debe reaccionar para intentar evitar o mitigar estas acciones. ¿Qué técnicas o herramientas puede usar el sistema para detectar estos ataques? 
+
+Detección de anomalias: Usar algoritmos de machine learning para identificar comportamientos anormales, como multiples intentos fallidos de inicio de sesion.
+Filtrado de contenido: Filtrar entradas que contengan comandos peligrosos (como los de SQL Injection).
+Autenticación multifactor: Utilizar varios metodos de verificacion para prevenir ataques de fuerza bruta.
+
+3) Explicar cómo se aplicaría la poda alfa-beta
+
+ la poda alfa-beta puede aplicarse a la hora de realizar la busqueda en arboles de decisiones para analizar posibles amenazas. Por ejemplo, si en un nodo de decisión ya se determina que un ataque es imposible (porque no cumple ciertas condiciones), no se hace necesario seguir evaluando las ramas correspondientes, lo que mejora la eficiencia del sistema.
+
+4) Construir un árbol de decisión simplificado
+
+                              ¿Intentos fallidos consecutivos?
+                                  /                          \
+                              Sí                              No
+                            /                                   \
+              Direccion IP sospechosa?                     Usuario desconocido?
+                   /          \                              /               \
+                 Sí            No                           Sí                No
+               /                 \                         /                   \
+      Bloquear cuenta    Seguir verificando           Alertar admin        Permitir acceso
+            
